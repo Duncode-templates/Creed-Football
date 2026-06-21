@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-display: ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-sans-serif, system-ui, sans-serif;
+  
+  --color-vault-black: #08090a;
+  --color-vault-dark: #0f1115;
+  --color-vault-card: #15181e;
+  --color-vault-border: #232832;
+  --color-vault-gray: #4b5563;
+  --color-pitch-green: #00dd53;
+  --color-pitch-neon: #aeff00;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-vault-black);
+    color: #ffffff;
+    font-family: var(--font-sans);
+  }
+}
+
+/* Custom Scrollbar for premium vibe */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-vault-black);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-vault-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-pitch-green);
+}
+

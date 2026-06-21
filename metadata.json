@@ -1,0 +1,6 @@
+{
+  "name": "Creed",
+  "description": "A premium football news landing page featuring match reports, real-time live match tickers, and tactical analysis in a clean green, white, and dark vault theme.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

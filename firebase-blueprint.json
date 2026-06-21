@@ -1,0 +1,30 @@
+{
+  "entities": {
+    "Article": {
+      "title": "Article",
+      "description": "A Creed football news article",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "tag": { "type": "string" },
+        "summary": { "type": "string" },
+        "content": { "type": "string" },
+        "date": { "type": "string" },
+        "readTime": { "type": "string" },
+        "image": { "type": "string" },
+        "author": { "type": "string" },
+        "likes": { "type": "number" },
+        "comments": { "type": "number" },
+        "isTrending": { "type": "boolean" }
+      },
+      "required": ["title", "content"]
+    }
+  },
+  "firestore": {
+    "/articles/{articleId}": {
+      "schema": "Article",
+      "description": "Creed news articles"
+    }
+  }
+}
