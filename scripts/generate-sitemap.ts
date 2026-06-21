@@ -95,70 +95,78 @@ async function generateSitemap() {
 
   // 4. Dynamically crawl ALL Firestore articles with pagination support
   try {
-    const configPath = path.join(rootDir, 'firebase-applet-config.json');
-    if (fs.existsSync(configPath)) {
-      const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
-      const projectId = config.projectId;
-      const dbId = config.firestoreDatabaseId || '(default)';
-      const apiKey = config.apiKey;
-      const collectionName = config.collectionName || 'articles';
+    let projectId = process.env.VITE_FIREBASE_PROJECT_ID || process.env.FIREBASE_PROJECT_ID || process.env.PROJECT_ID;
+    let dbId = process.env.VITE_FIREBASE_DATABASE_ID || process.env.FIREBASE_DATABASE_ID || process.env.DATABASE_ID || '(default)';
+    let apiKey = process.env.VITE_FIREBASE_API_KEY || process.env.FIREBASE_API_KEY || process.env.API_KEY;
+    let collectionName = process.env.VITE_FIREBASE_COLLECTION_NAME || process.env.FIREBASE_COLLECTION_NAME || process.env.COLLECTION_NAME || 'articles';
 
-      if (projectId && apiKey) {
-        let nextPageToken: string | undefined = undefined;
-        let totalFetched = 0;
-        
-        do {
-          let firestoreUrl = `https://firestore.googleapis.com/v1/projects/${projectId}/databases/${dbId}/documents/${collectionName}?key=${apiKey}`;
-          if (nextPageToken) {
-            firestoreUrl += `&pageToken=${nextPageToken}`;
-          }
-
-          console.log(`Querying Firestore partition...`);
-          const response = await fetch(firestoreUrl);
-          
-          if (response.ok) {
-            const data: any = await response.json();
-            if (data && data.documents && Array.isArray(data.documents)) {
-              totalFetched += data.documents.length;
-              data.documents.forEach((doc: any) => {
-                // Extract document ID from final segment of path
-                const nameParts = doc.name.split('/');
-                const docId = nameParts[nameParts.length - 1];
-                const loc = `${baseDomain}/#/article/${docId}`;
-
-                let dateStr = new Date().toISOString().substring(0, 10);
-                const fields = doc.fields || {};
-                const rawDate = fields.date?.stringValue || fields.publishedAt?.stringValue || fields.scrapedAt?.stringValue;
-                
-                if (rawDate) {
-                  try {
-                    const d = new Date(rawDate);
-                    if (!isNaN(d.getTime())) {
-                      dateStr = d.toISOString().substring(0, 10);
-                    }
-                  } catch (e) {}
-                }
-
-                // Add or update the list automatically keeping duplicates out
-                addOrUpdateEntry({
-                  loc,
-                  lastmod: dateStr,
-                  changefreq: 'weekly',
-                  priority: '0.7'
-                });
-              });
-            }
-            nextPageToken = data.nextPageToken;
-          } else {
-            console.error(`Firestore response failed: ${response.status} - ${response.statusText}`);
-            nextPageToken = undefined;
-          }
-        } while (nextPageToken);
-
-        console.log(`Firestore crawling completed. Fetched a total of ${totalFetched} items.`);
+    // Fallback to local file if not supplied via env vars
+    if (!projectId || !apiKey) {
+      const configPath = path.join(rootDir, 'firebase-applet-config.json');
+      if (fs.existsSync(configPath)) {
+        const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+        projectId = projectId || config.projectId;
+        dbId = config.firestoreDatabaseId || dbId || '(default)';
+        apiKey = apiKey || config.apiKey;
+        collectionName = config.collectionName || collectionName || 'articles';
       }
+    }
+
+    if (projectId && apiKey) {
+      let nextPageToken: string | undefined = undefined;
+      let totalFetched = 0;
+      
+      do {
+        let firestoreUrl = `https://firestore.googleapis.com/v1/projects/${projectId}/databases/${dbId}/documents/${collectionName}?key=${apiKey}`;
+        if (nextPageToken) {
+          firestoreUrl += `&pageToken=${nextPageToken}`;
+        }
+
+        console.log(`Querying Firestore collection segments...`);
+        const response = await fetch(firestoreUrl);
+        
+        if (response.ok) {
+          const data: any = await response.json();
+          if (data && data.documents && Array.isArray(data.documents)) {
+            totalFetched += data.documents.length;
+            data.documents.forEach((doc: any) => {
+              // Extract document ID from final segment of path
+              const nameParts = doc.name.split('/');
+              const docId = nameParts[nameParts.length - 1];
+              const loc = `${baseDomain}/#/article/${docId}`;
+
+              let dateStr = new Date().toISOString().substring(0, 10);
+              const fields = doc.fields || {};
+              const rawDate = fields.date?.stringValue || fields.publishedAt?.stringValue || fields.scrapedAt?.stringValue;
+              
+              if (rawDate) {
+                try {
+                  const d = new Date(rawDate);
+                  if (!isNaN(d.getTime())) {
+                    dateStr = d.toISOString().substring(0, 10);
+                  }
+                } catch (e) {}
+              }
+
+              // Add or update the list automatically keeping duplicates out
+              addOrUpdateEntry({
+                loc,
+                lastmod: dateStr,
+                changefreq: 'weekly',
+                priority: '0.7'
+              });
+            });
+          }
+          nextPageToken = data.nextPageToken;
+        } else {
+          console.error(`Firestore response failed: ${response.status} - ${response.statusText}`);
+          nextPageToken = undefined;
+        }
+      } while (nextPageToken);
+
+      console.log(`Firestore crawling completed. Fetched a total of ${totalFetched} items.`);
     } else {
-      console.warn('Firebase configuration file was not found. Skipping live Firestore crawl.');
+      console.warn('Firebase configuration (projectId/apiKey) was not found in environment or local file. Skipping live Firestore crawl.');
     }
   } catch (error) {
     console.warn('Could not query dynamic live articles from database (using existing and mock list):', error);
