@@ -4,7 +4,7 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>https://creed-football.netlify.app/</loc>
+        <loc>https://creed-football.netlify.app</loc>
         <lastmod>2026-06-21</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
@@ -16,7 +16,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://creed-football.netlify.app/#/transfers</loc>
+        <loc>https://creed-football.netlify.app/#/clubs</loc>
         <lastmod>2026-06-21</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
@@ -28,7 +28,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://creed-football.netlify.app/#/clubs</loc>
+        <loc>https://creed-football.netlify.app/#/transfers</loc>
         <lastmod>2026-06-21</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
@@ -40,56 +40,44 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://creed-football.netlify.app/#/article/art-1</loc>
+        <loc>https://creed-football.netlify.app/#/article/_a_child_goes_to_bed_and_doesn_t_wake_up___the_families_left</loc>
+        <lastmod>2026-06-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/_people_think_i_ve_vanished___mary_earps_on_signing_for_lond</loc>
         <lastmod>2026-06-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://creed-football.netlify.app/#/article/art-2</loc>
-        <lastmod>2026-06-19</lastmod>
+        <loc>https://creed-football.netlify.app/#/article/_that_penalty_changed_my_life___panenka_s_pride_50_years_on_</loc>
+        <lastmod>2026-06-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://creed-football.netlify.app/#/article/art-3</loc>
-        <lastmod>2026-06-18</lastmod>
+        <loc>https://creed-football.netlify.app/#/article/_they_have_all_the_power___investigation_finds_that_93__of_i</loc>
+        <lastmod>2026-06-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://creed-football.netlify.app/#/article/art-4</loc>
-        <lastmod>2026-06-17</lastmod>
+        <loc>https://creed-football.netlify.app/#/article/_you_can_t_unsee_it___how_hot_pink_became_the_unofficial_col</loc>
+        <lastmod>2026-06-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://creed-football.netlify.app/#/article/art-5</loc>
-        <lastmod>2026-06-16</lastmod>
+        <loc>https://creed-football.netlify.app/#/article/andy_burnham_has_shown_that_he_can_win__but_can_he_govern_br</loc>
+        <lastmod>2026-06-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://creed-football.netlify.app/#/article/art-6</loc>
-        <lastmod>2026-06-15</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://creed-football.netlify.app/#/article/art-7</loc>
-        <lastmod>2026-06-14</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://creed-football.netlify.app/#/article/art-8</loc>
-        <lastmod>2026-06-13</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://creed-football.netlify.app/#/article/art-9</loc>
-        <lastmod>2026-06-12</lastmod>
+        <loc>https://creed-football.netlify.app/#/article/art-1</loc>
+        <lastmod>2026-06-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -154,8 +142,440 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://creed-football.netlify.app/#/article/art-2</loc>
+        <lastmod>2026-06-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://creed-football.netlify.app/#/article/art-20</loc>
         <lastmod>2026-06-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/art-3</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/art-4</loc>
+        <lastmod>2026-06-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/art-5</loc>
+        <lastmod>2026-06-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/art-6</loc>
+        <lastmod>2026-06-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/art-7</loc>
+        <lastmod>2026-06-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/art-8</loc>
+        <lastmod>2026-06-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/art-9</loc>
+        <lastmod>2026-06-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/australia_s_jackson_irvine_has_no_sympathy_for_paraguay_afte</loc>
+        <lastmod>2026-06-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/brazil_3-0_haiti__world_cup_2026___as_it_happened</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/brazil_sweep_into_form_as_cunha_s_quickfire_double_sparks_wo</loc>
+        <lastmod>2026-06-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/burnham_calls_for__new_path_for_britain__as_starmer_vows_to_</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/celebrations_and_a_swift_exit_after_a_burnham_win__beyond_ou</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/comparison_to_hitler__mao__stalin__trump_says___sounds_good_</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/cura_ao_stand_firm_and_claim_historic_first_world_cup_point_</loc>
+        <lastmod>2026-06-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/deniz_undav_s_double_earns_germany_dramatic_late_win_against</loc>
+        <lastmod>2026-06-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/ecuador_0-0_cura_ao__world_cup_2026___as_it_happened</loc>
+        <lastmod>2026-06-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/elliot_anderson_is_england_s_spirit_animal___and_is_now_indi</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/england_are_a_mess_in_this_test__isn_t_it_about_time_the_bre</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/england_offer_rare_peek_behind_the_curtain_with_no_place_to_</loc>
+        <lastmod>2026-06-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/fifa_urged_to_drop_saudi_oil_giant_aramco_as_activists_targe</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/football_daily___turkey_need_another_rebrand_after_failing_t</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/football_daily___usa__mexico__canada__which_world_cup_co-hos</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/from_nightclubs_and_worksites__fans_in_sydney_and_melbourne_</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/gary_lineker_to_appear_as_special_guest_on_itv_during_world_</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/gary_o_neil_set_to_leave_strasbourg_and_take_over_as_ipswich</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/germany_2-1_c_te_d_ivoire__world_cup_2026___as_it_happened</loc>
+        <lastmod>2026-06-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/germany_v_c_te_d_ivoire__world_cup_2026___live_</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/good_food__good_genes__good_luck__how_ronaldo__serena_and_ot</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/grand_canyon_on__extreme_heat__watch__with_temperatures_set_</loc>
+        <lastmod>2026-06-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/i_don_t_like_the_world_cup_hydration_breaks_but_trust_me___t</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/jesse_marsch__windmilling_human_meme_or_shrewd_protector_of_</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/labour_peer_and_reform_mp_clash_over__brown_people__and_dome</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/lamine_yamal_a_genius__like_dal__or_michelangelo___says_spai</loc>
+        <lastmod>2026-06-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/lib_dem_mp_cameron_thomas_arrested_on_suspicion_of_assault</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/life_in_hollywood_bubble_plays_second_fiddle_to_us_need_for_</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/netherlands_5-1_sweden__world_cup_2026___as_it_happened</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/netherlands_v_sweden__world_cup_2026___live</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/players_are_human_beings_and_social_media_comments_reach_us_</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/read_a_book__join_a_club__stare_at_a_wall__social_media_alte</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/room_shuts_door_as_cura_ao_claim_historic_first_world_cup_po</loc>
+        <lastmod>2026-06-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/scotland_0-1_morocco__world_cup_2026___as_it_happened</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/scotland_s_world_cup_destiny_is_in_their_own_hands_but_lack_</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/shoppers_splash_out_on_fans_and_paddling_pools_as_retail_sal</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/socceroos_have_rare_chance_to_prove_credentials___and_secure</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/spaceship_stadiums_and_ronaldo-mania__guardian_writers__firs</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/sports_quiz_of_the_week__world_cup__us_open__wimbledon_and_r</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/take_me_home__why_country_roads_has_struck_a_chord_at_the_wo</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/the_2026_world_cup_team_of_the_tournament_so_far__without_th</loc>
+        <lastmod>2026-06-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/the_bear_to_jackass__the_seven_best_shows_to_stream_this_wee</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/the_brilliant_michael_olise_represents_a_key_faultline_in_hi</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/the_french_aristocrat_and_the_all-american_idiot__henry_v_la</loc>
+        <lastmod>2026-06-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/tunisia_0-4_japan__world_cup_2026___as_it_happened</loc>
+        <lastmod>2026-06-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/tunisia_v_japan__world_cup_2026___live</loc>
+        <lastmod>2026-06-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/turkey_0-1_paraguay__world_cup_2026___as_it_happened</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/turkey_need_another_rebrand_after_failing_to_take_flight_at_</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/tv_tonight__jon_snow_defies_alzheimer_s_in_the_most_moving_w</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/two_world_cup_matches_were_played_in__severe_heat___analysis</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/ueda_inspires_japan_to_eliminate_tunisia_in_landmark_1_000th</loc>
+        <lastmod>2026-06-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/usa_2-0_australia__world_cup_2026___as_it_happened</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/usa_soak_in_seattle_s_familiar_support_en_route_to_making_wo</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/usa_surge_into_world_cup_knockout_stage_after_dominant_victo</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/venetian_sun_shines_at_royal_ascot_as_brighton_s_bloom_lands</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/world_cup_2026__infantino_criticised_over_private_jet_use__c</loc>
+        <lastmod>2026-06-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/world_cup_2026__kon__grateful_for_support_after_injury_and_k</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/world_cup_2026__scotland_fall_flat__usa_into_knockouts__turk</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/world_cup_2026__usa_s__high_iq__squad_backed_to_handle_hype_</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/world_cup_baby_joy_for_norway_s__stig_rd_while_doku_plans_to</loc>
+        <lastmod>2026-06-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/world_cup_defeat_offers_new_us_friends_a_quick_lesson_and_to</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/world_cup_football__us_open_golf__plus_test_and_t20_cricket_</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/world_cup_schedule_today__how_to_watch__tv_channels___live_s</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/young_men_caught_up_in_extremism__in_search_for_belonging___</loc>
+        <lastmod>2026-06-21</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
