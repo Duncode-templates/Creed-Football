@@ -11,6 +11,7 @@ import FeaturedHero from './components/FeaturedHero';
 import NewsFeed from './components/NewsFeed';
 import ArticlePage from './components/ArticlePage';
 import ClubNews from './components/ClubNews';
+import SEO from './components/SEO';
 import { fetchArticlesFromFirebase, getStoredFirebaseConfig } from './firebase';
 import { mockArticles } from './footballData';
 import { Match, NewsArticle } from './types';
@@ -81,8 +82,14 @@ export default function App() {
     fetchDbArticles();
   }, []);
 
-  // Filter hero article based on popular soccer keywords
+  // Filter hero article based on popular soccer keywords, prioritizing "live" in title
   const featuredArticle = useMemo(() => {
+    // First, prioritize any article with "live" in the title (case-insensitive)
+    const liveArticle = articles.find(art => art.title.toLowerCase().includes('live'));
+    if (liveArticle) {
+      return liveArticle;
+    }
+
     const popularKeywords = [
       'chelsea', 'arsenal', 'manchester', 'madrid', 'barcelona', 'liverpool', 
       'city', 'bayern', 'psg', 'united', 'bellingham', 'haaland', 'saka', 
@@ -301,6 +308,18 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#0c0c0e] text-white selection:bg-[#00dd53] selection:text-black font-sans rounded-none">
       
+      {/* General Search Engine Optimization dynamic injector */}
+      {!selectedArticle && (
+        <SEO 
+          title={activeCategory && activeCategory !== 'All News' 
+            ? `${activeCategory} Football News & Analysis | Creed Football` 
+            : searchQuery 
+              ? `Search results for "${searchQuery}" | Creed Football` 
+              : undefined
+          } 
+        />
+      )}
+
       {/* Sleek Navigation Bar */}
       <Header
         onSearch={handleSearch}

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { NewsArticle } from '../types';
 import Markdown from 'react-markdown';
 import { ArrowLeft, ArrowRight, Share2, ClipboardCheck, User } from 'lucide-react';
+import SEO from './SEO';
 
 interface ArticlePageProps {
   article: NewsArticle;
@@ -30,13 +31,16 @@ export default function ArticlePage({ article, onClose, articles, onSelectArticl
   }, [articles, article]);
 
   const handleShare = () => {
-    navigator.clipboard.writeText(`${article.title} - Read live on Creed Football`);
+    const shareUrl = `https://creed-football.netlify.app/#/article/${article.id}`;
+    navigator.clipboard.writeText(`${article.title}\nRead live on Creed Football: ${shareUrl}`);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
 
   return (
     <div className="w-full text-white font-sans animate-fade-in py-4">
+      {/* Search Engine Optimization meta dynamic injector */}
+      <SEO article={article} />
       
       {/* Back navigation button */}
       <div className="mb-6">

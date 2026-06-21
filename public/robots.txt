@@ -1,0 +1,11 @@
+# robots.txt for Creed Football
+# Highly optimized for search engines (Google, Bing, Yahoo!, etc.)
+
+User-agent: *
+Allow: /
+
+# Direct crawlers to index all static contents and images
+Allow: /assets/
+Allow: /images/
+
+Sitemap: https://creed-football.netlify.app/sitemap.xml
