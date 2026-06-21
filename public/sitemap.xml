@@ -3,15 +3,12 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    <!-- Homepage -->
     <url>
         <loc>https://creed-football.netlify.app/</loc>
         <lastmod>2026-06-21</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
-
-    <!-- Categories / Sections -->
     <url>
         <loc>https://creed-football.netlify.app/#/analysis</loc>
         <lastmod>2026-06-21</lastmod>
@@ -42,8 +39,6 @@
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
-
-    <!-- Single Articles (Standard mock articles indexed) -->
     <url>
         <loc>https://creed-football.netlify.app/#/article/art-1</loc>
         <lastmod>2026-06-20</lastmod>
@@ -125,6 +120,42 @@
     <url>
         <loc>https://creed-football.netlify.app/#/article/art-14</loc>
         <lastmod>2026-06-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/art-15</loc>
+        <lastmod>2026-06-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/art-16</loc>
+        <lastmod>2026-06-05</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/art-17</loc>
+        <lastmod>2026-06-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/art-18</loc>
+        <lastmod>2026-06-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/art-19</loc>
+        <lastmod>2026-06-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://creed-football.netlify.app/#/article/art-20</loc>
+        <lastmod>2026-06-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>

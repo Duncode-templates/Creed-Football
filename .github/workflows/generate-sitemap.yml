@@ -1,0 +1,46 @@
+name: Generate Dynamic SEO Sitemap
+
+on:
+  schedule:
+    # Run 4 times a day (every 6 hours: 12 AM, 6 AM, 12 PM, 6 PM UTC)
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-sitemap:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci || npm install
+
+      - name: Generate Dynamic Sitemap
+        run: npx tsx scripts/generate-sitemap.ts
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          if git diff --quiet public/sitemap.xml; then
+            echo "No changes detected in public/sitemap.xml. Skipping."
+          else
+            echo "Changes detected in public/sitemap.xml. Committing..."
+            git add public/sitemap.xml
+            git commit -m "chore(seo): automatically update sitemap.xml with live articles [skip ci]"
+            git push origin HEAD
+          fi
