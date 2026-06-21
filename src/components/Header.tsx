@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Shield, Search, Menu, X } from 'lucide-react';
+import { Search, Menu, X } from 'lucide-react';
 
 interface HeaderProps {
   onSearch: (query: string) => void;
@@ -63,13 +63,6 @@ export default function Header({ onSearch, activeCategory, setActiveCategory, ca
 
         {/* Action button - No border radius */}
         <div className="flex items-center gap-4">
-          <a
-            href="#match-center"
-            className="hidden sm:inline-flex items-center gap-1.5 bg-white text-black font-display font-bold text-xs px-4 py-2 rounded-none hover:bg-[#00dd53] hover:shadow-[0_0_12px_rgba(0,221,83,0.5)] transition-all uppercase tracking-wider"
-          >
-            <Shield className="h-3.5 w-3.5" /> Match Centre
-          </a>
-
           <button
             className="md:hidden text-white p-1 hover:text-[#00dd53] transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -136,15 +129,6 @@ export default function Header({ onSearch, activeCategory, setActiveCategory, ca
                 </button>
               );
             })}
-          </div>
-          <div className="border-t border-white/[0.06] pt-4">
-            <a
-              href="#match-center"
-              onClick={() => setMobileMenuOpen(false)}
-              className="w-full inline-flex justify-center items-center gap-2 bg-[#00dd53] text-[#0c0c0e] font-display font-extrabold text-xs py-3 rounded-none hover:bg-white transition-all uppercase tracking-wider"
-            >
-              <Shield className="h-4 w-4" /> Match Centre
-            </a>
           </div>
         </div>
       )}
