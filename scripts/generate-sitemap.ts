@@ -72,6 +72,9 @@ async function generateSitemap() {
     { loc: `${baseDomain}/#/news`, changefreq: 'daily', priority: '0.8' },
     { loc: `${baseDomain}/#/clubs`, changefreq: 'daily', priority: '0.8' },
     { loc: `${baseDomain}/#/worldcup`, changefreq: 'daily', priority: '0.8' },
+    { loc: `${baseDomain}/#/about`, changefreq: 'monthly', priority: '0.5' },
+    { loc: `${baseDomain}/#/privacy`, changefreq: 'monthly', priority: '0.3' },
+    { loc: `${baseDomain}/#/terms`, changefreq: 'monthly', priority: '0.3' },
   ];
 
   staticRoutes.forEach(route => {

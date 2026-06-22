@@ -12,6 +12,9 @@ import NewsFeed from './components/NewsFeed';
 import ArticlePage from './components/ArticlePage';
 import ClubNews from './components/ClubNews';
 import SEO from './components/SEO';
+import AboutPage from './components/AboutPage';
+import PrivacyPolicyPage from './components/PrivacyPolicyPage';
+import TermsOfServicePage from './components/TermsOfServicePage';
 import { fetchArticlesFromFirebase, getStoredFirebaseConfig } from './firebase';
 import { mockArticles } from './footballData';
 import { Match, NewsArticle } from './types';
@@ -24,6 +27,7 @@ export default function App() {
   const [activeCategory, setActiveCategory] = useState('');
   const [selectedMatch, setSelectedMatch] = useState<Match | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<NewsArticle | null>(null);
+  const [currentStaticPage, setCurrentStaticPage] = useState<'about' | 'privacy' | 'terms' | null>(null);
 
   // Connection and Dynamic Articles State
   const [articles, setArticles] = useState<NewsArticle[]>(mockArticles);
@@ -238,12 +242,26 @@ export default function App() {
         const found = articles.find((art) => art.id === articleId);
         if (found) {
           setSelectedArticle(found);
+          setCurrentStaticPage(null);
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+      } else if (hash === '#/about') {
+        setCurrentStaticPage('about');
+        setSelectedArticle(null);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (hash === '#/privacy') {
+        setCurrentStaticPage('privacy');
+        setSelectedArticle(null);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (hash === '#/terms') {
+        setCurrentStaticPage('terms');
+        setSelectedArticle(null);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       } else if (hash.startsWith('#/category/')) {
         const cat = decodeURIComponent(hash.replace('#/category/', ''));
         setActiveCategory(cat);
         setSelectedArticle(null);
+        setCurrentStaticPage(null);
         setSearchQuery('');
         setTimeout(() => {
           const el = document.getElementById('category-section-main');
@@ -255,8 +273,10 @@ export default function App() {
         const query = decodeURIComponent(hash.replace('#/search/', ''));
         setSearchQuery(query);
         setSelectedArticle(null);
+        setCurrentStaticPage(null);
       } else if (hash === '#/' || !hash) {
         setSelectedArticle(null);
+        setCurrentStaticPage(null);
       }
     };
 
@@ -332,16 +352,21 @@ export default function App() {
       {/* Main Container Stage wrapper */}
       <main className="max-w-6xl mx-auto px-4 md:px-6 py-6 font-sans transition-all duration-300 rounded-none w-full">
         
-        {selectedArticle ? (
-          <ArticlePage
-            article={selectedArticle}
-            onClose={() => { window.location.hash = '#/'; }}
-            articles={articles}
-            onSelectArticle={handleArticleClick}
-          />
-        ) : (
-          <>
-            {/* Top-tier Featured Story banner */}
+        {currentStaticPage === 'about' && <AboutPage />}
+        {currentStaticPage === 'privacy' && <PrivacyPolicyPage />}
+        {currentStaticPage === 'terms' && <TermsOfServicePage />}
+
+        {!currentStaticPage && (
+          selectedArticle ? (
+            <ArticlePage
+              article={selectedArticle}
+              onClose={() => { window.location.hash = '#/'; }}
+              articles={articles}
+              onSelectArticle={handleArticleClick}
+            />
+          ) : (
+            <>
+              {/* Top-tier Featured Story banner */}
             {!searchQuery && featuredArticle && (
               <FeaturedHero
                 article={featuredArticle}
@@ -432,7 +457,7 @@ export default function App() {
               />
             )}
           </>
-        )}
+        ))}
 
       </main>
 
@@ -458,6 +483,11 @@ export default function App() {
             </p>
             <div className="text-[11px] text-gray-655 font-mono">
               <p>© {new Date().getFullYear()} Creed Vault. All rights reserved.</p>
+              <div className="flex gap-4 mt-2">
+                <a href="#/about" className="hover:text-[#00dd53] transition-colors">About</a>
+                <a href="#/privacy" className="hover:text-[#00dd53] transition-colors">Privacy</a>
+                <a href="#/terms" className="hover:text-[#00dd53] transition-colors">Terms</a>
+              </div>
             </div>
           </div>
 
