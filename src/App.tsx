@@ -15,6 +15,8 @@ import SEO from './components/SEO';
 import AboutPage from './components/AboutPage';
 import PrivacyPolicyPage from './components/PrivacyPolicyPage';
 import TermsOfServicePage from './components/TermsOfServicePage';
+import ContactPage from './components/ContactPage';
+import CookieConsent from './components/CookieConsent';
 import { fetchArticlesFromFirebase, getStoredFirebaseConfig } from './firebase';
 import { mockArticles } from './footballData';
 import { Match, NewsArticle } from './types';
@@ -27,7 +29,7 @@ export default function App() {
   const [activeCategory, setActiveCategory] = useState('');
   const [selectedMatch, setSelectedMatch] = useState<Match | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<NewsArticle | null>(null);
-  const [currentStaticPage, setCurrentStaticPage] = useState<'about' | 'privacy' | 'terms' | null>(null);
+  const [currentStaticPage, setCurrentStaticPage] = useState<'about' | 'privacy' | 'terms' | 'contact' | null>(null);
 
   // Connection and Dynamic Articles State
   const [articles, setArticles] = useState<NewsArticle[]>(mockArticles);
@@ -257,6 +259,10 @@ export default function App() {
         setCurrentStaticPage('terms');
         setSelectedArticle(null);
         window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (hash === '#/contact') {
+        setCurrentStaticPage('contact');
+        setSelectedArticle(null);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       } else if (hash.startsWith('#/category/')) {
         const cat = decodeURIComponent(hash.replace('#/category/', ''));
         setActiveCategory(cat);
@@ -355,6 +361,7 @@ export default function App() {
         {currentStaticPage === 'about' && <AboutPage />}
         {currentStaticPage === 'privacy' && <PrivacyPolicyPage />}
         {currentStaticPage === 'terms' && <TermsOfServicePage />}
+        {currentStaticPage === 'contact' && <ContactPage />}
 
         {!currentStaticPage && (
           selectedArticle ? (
@@ -458,7 +465,6 @@ export default function App() {
             )}
           </>
         ))}
-
       </main>
 
       {/* Styled Footer containing pitch dispatch newsletter cleanly as requested */}
@@ -487,6 +493,7 @@ export default function App() {
                 <a href="#/about" className="hover:text-[#00dd53] transition-colors">About</a>
                 <a href="#/privacy" className="hover:text-[#00dd53] transition-colors">Privacy</a>
                 <a href="#/terms" className="hover:text-[#00dd53] transition-colors">Terms</a>
+                <a href="#/contact" className="hover:text-[#00dd53] transition-colors">Contact</a>
               </div>
             </div>
           </div>
@@ -541,6 +548,7 @@ export default function App() {
         <ChevronUp className="h-4 w-4" />
       </button>
 
+      <CookieConsent />
     </div>
   );
 }

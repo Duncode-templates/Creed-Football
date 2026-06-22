@@ -75,6 +75,7 @@ async function generateSitemap() {
     { loc: `${baseDomain}/#/about`, changefreq: 'monthly', priority: '0.5' },
     { loc: `${baseDomain}/#/privacy`, changefreq: 'monthly', priority: '0.3' },
     { loc: `${baseDomain}/#/terms`, changefreq: 'monthly', priority: '0.3' },
+    { loc: `${baseDomain}/#/contact`, changefreq: 'monthly', priority: '0.5' },
   ];
 
   staticRoutes.forEach(route => {
